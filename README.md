@@ -1,5 +1,9 @@
 # PaisesApp
 
+## Descripción:
+Esta aplicación consume la API de restcountries para mostrar la información de los paises
+Los estilos utilizados son de PrimeNG 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
