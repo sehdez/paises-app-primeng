@@ -1,0 +1,14 @@
+<h1 class="textColor" >Capital</h1>
+
+<app-pais-input placeholder="Buscar capital"
+                (onEnter)="buscar( $event )">
+</app-pais-input>
+<br>
+
+<app-loading *ngIf="buscandoPaises; else Tabla" ></app-loading>
+
+<ng-template #Tabla>
+    <app-pais-tabla [hayPaises]= "hayPaises" [paises]="paises" ></app-pais-tabla>
+</ng-template>
+
+

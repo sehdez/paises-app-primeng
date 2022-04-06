@@ -1,0 +1,18 @@
+<div>
+    <button
+        pButton type="button" [label]="region|titlecase"
+        *ngFor="let region of regiones"
+        class="p-button-outlined p-button-rounded"
+        [ngClass]="{
+            'p-button-primary': regionActiva === region,
+            'p-button-secondary': regionActiva !== region
+        }"
+        (click)= "buscar( region )" >
+    </button>
+</div>
+<app-loading *ngIf="buscandoPaises; else Tabla" ></app-loading>
+
+<ng-template #Tabla>
+    <app-pais-tabla [hayPaises]="hayPaises" [paises]="paises" ></app-pais-tabla>
+
+</ng-template>

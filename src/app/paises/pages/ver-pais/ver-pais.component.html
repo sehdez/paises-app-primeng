@@ -1,0 +1,61 @@
+<!-- <div *ngIf="!pais; else divPais" 
+    class="alert alert-info textColor">
+    <i class="fa fa-refresh fa-spin fa-x2 textColor" ></i> Espere por favor...
+</div>
+
+<ng-template #divPais class="textColor">
+    
+    <h1 class="textColor col"> {{ pais[0].translations['spa'].common }} </h1>
+    <div class="grid" >
+        
+        <img class="col-12 sm:col-4" [src]="pais[0].flags.png" alt="">
+        <div class="col-12 sm:col-8"> 
+
+            <div class="textColor">
+                <div class="col-12 md:col-6">
+
+                    <h3>Información:</h3>    
+                    <pre><strong>Continente: </strong>{{pais[0].continents}}     </pre>
+                    <pre><strong>Área: </strong>{{pais[0].area}}     </pre>
+                    <pre><strong>Población: </strong> {{pais[0].population| number}}     </pre>
+                    <pre><strong>Capital: </strong>{{pais[0].capital}}     </pre>
+                    <pre><strong>Código Alpha3: </strong>{{pais[0].cca3}} </pre>
+                </div>
+                    
+            </div>
+        </div>
+        
+    </div>
+</ng-template> -->
+
+
+<app-loading *ngIf="!pais; else divPais"></app-loading>
+
+<ng-template #divPais class="textColor">
+    <h1 class="textColor" > {{ pais[0].translations['spa'].common }} </h1> 
+    
+    <div class="grid">
+        <p-fieldset class="col-12 md:col-6" legend="Bandera:" [toggleable]="true">
+            <img [src]="pais[0].flags.png" width="250px"  alt="">
+        </p-fieldset>
+        <p-fieldset class="col-12 md:col-6" legend="Información:" [toggleable]="true">
+            <pre><strong>Continente:    </strong>{{pais[0].continents}}</pre>
+            <pre><strong>Área:          </strong>{{pais[0].area}}</pre>
+            <pre><strong>Población:     </strong> {{pais[0].population| number}} </pre>
+            <pre><strong>Capital:       </strong>{{pais[0].capital}}</pre>
+            <pre><strong>Código Alpha3: </strong>{{pais[0].cca3}}</pre>
+        </p-fieldset>
+    </div>
+
+
+</ng-template>
+<!-- <div class="col-12 sm:col-7">
+                <strong>Continente: </strong>{{pais[0].continents}}                 
+                <strong>Área: </strong>{{pais[0].area}}                     
+                <strong>Población: </strong> {{pais[0].population| number}} 
+                <strong>Capital: </strong>{{pais[0].capital}}               
+                <strong>Código Alpha3: </strong>{{pais[0].cca3}}            
+            </div> -->
+
+
+

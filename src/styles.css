@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    font-family: var( --font-family );
+    background-color: var( --surface-b );
+
+
+}
+.textColor{
+    color:rgba(255, 255, 255, 0.87);
+}
+.textColorSecondary{
+  color:rgba(255, 255, 255, 0.6);
+
+}
+
+/* --text-color:rgba(255, 255, 255, 0.87);
+  --text-color-secondary:rgba(255, 255, 255, 0.6); */

@@ -1,0 +1,24 @@
+<div class="card">
+    <p-table responsiveLayout="stack" [value]="paises" *ngIf="hayPaises">
+        
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th>Bandera</th>
+                <th>Nombre</th>
+                <th>Captital</th>
+                <th>No. habitantes</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pais let-columns="columns">
+            <tr>
+                <td><span class="p-column-title">Bandera</span><img width="200px" [src]="pais.flags.png">  </td>
+                <td><span class="p-column-title">Nombre</span>{{ pais.name.common }}</td>
+                <td><span class="p-column-title">Captital</span>{{ pais.capital }}</td>
+                <td><span class="p-column-title">No. habitantes</span><span>{{ pais.population }}</span></td>
+                <td><span class="p-column-title"></span><span><p-button [routerLink] = "['/pais', pais.cca2]" label="Ver mas" ></p-button> </span></td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
