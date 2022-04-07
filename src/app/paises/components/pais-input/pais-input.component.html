@@ -1,8 +1,15 @@
 
-<form (submit)="buscar()" [formGroup]="miFormulario" autocomplete="off">
-    
+<form (submit)="buscar()"  [formGroup]="miFormulario" autocomplete="off">
+<!--     
     <span class="p-float-label">
-        <input id="float-input" formControlName="termino"  type="text"  pInputText> 
+        <input  id="float-input" formControlName="termino"  type="text"  pInputText> 
+        <label for="float-input">{{placeholder}}</label>
+    </span> -->
+
+    
+    <span class="p-float-label p-fluid" >
+        <p-autoComplete formControlName="termino"  [suggestions]="results" (completeMethod)="search()" [showEmptyMessage]="true"></p-autoComplete>
         <label for="float-input">{{placeholder}}</label>
     </span>
 </form>
+

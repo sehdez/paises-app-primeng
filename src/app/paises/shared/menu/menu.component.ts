@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
               label: 'Buscar país por',
               icon: 'pi pi-search',
               items: [
-                { label: 'Nombre',  icon: 'pi pi-hashtag', routerLink: 'pais'       },
+                { label: 'Nombre',  icon: 'pi pi-hashtag', routerLink: 'pais'   },
                 { label: 'Region',  icon: 'pi pi-globe',   routerLink: 'region' },
                 { label: 'Capital', icon: 'pi pi-map',     routerLink: 'capital'}
               ]
@@ -26,9 +26,17 @@ export class MenuComponent implements OnInit {
               label: 'Contacto',
               icon: 'pi pi-user',
               items: [
-                  {label: 'Github', icon: 'pi pi-github', url: 'https://github.com/sehdez'},
-                  {label: 'HeroesApp', icon: 'pi pi-link', url: 'https://sehdez.github.io/Heroes-App/#/heroes/listado'}
-              ]
+                  { label: 'Código en Github', icon: 'pi pi-github', url: 'https://github.com/sehdez/paises-app-primeng'},
+                  { label: 'Más App', 
+                    icon: 'pi pi-plus',
+                    items: [
+                      { label: 'Heroes App', icon: 'pi pi-link', url: 'https://sehdez.github.io/Heroes-App/#/heroes/listado' },
+                      { label: 'Login App', icon: 'pi pi-link', url: 'https://auth-by-sergio.herokuapp.com/auth/login' },
+                      { label: 'Portafolio de productos', icon: 'pi pi-link', url: 'https://sehdez.github.io/portafolio/#/home' },
+                      { label: 'Graficas App', icon: 'pi pi-link', url: 'https://sehdez.github.io/Graficas/#/graficas/barras-doble' },
+                      { label: 'Pipes de Angular', icon: 'pi pi-link', url: 'https://sehdez.github.io/pipes-app/' }
+                    ] 
+                  }]
           }
       ];
   }

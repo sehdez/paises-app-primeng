@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Pais } from '../interfaces/paises';
 import { PaisCompleto } from '../interfaces/paisCompleto';
 
@@ -41,5 +41,6 @@ export class PaisesService {
     const url = `${ this.apiUrl }/alpha/${ id }`
     return this.http.get<PaisCompleto[]>( url );
   }
+
 
 }
